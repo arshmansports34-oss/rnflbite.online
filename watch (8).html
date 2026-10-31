@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- no index — ye page Google me nahi aayega -->
+<meta name="robots" content="noindex, nofollow">
+<title>Watch Live — NFL Webcast</title>
+<link rel="icon" type="image/svg+xml" href="https://streameastv2.mom/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --bg:#f4f6f9; --card:#ffffff; --card2:#f8fafc; --line:#e5e9f0; --line2:#cbd5e1;
+  --ink:#0f172a; --ink2:#334155; --ink3:#94a3b8;
+  --red:#e11d48; --red2:#be123c;
+  --text2:#475569; --text3:#94a3b8; --live:#e11d48;
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'DM Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+.bg-orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(900px 520px at 82% -12%,rgba(225,29,72,.07),transparent 62%),
+  radial-gradient(760px 480px at -8% 24%,rgba(37,99,235,.06),transparent 62%),
+  radial-gradient(640px 420px at 55% 112%,rgba(217,119,6,.05),transparent 62%)}
+
+.app{max-width:1100px;margin:0 auto;padding:1rem 1.25rem 4rem}
+
+/* header — same as index */
+.header{position:sticky;top:.75rem;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.7rem 1rem .7rem 1.1rem;border-radius:18px;background:rgba(255,255,255,.85);border:1px solid var(--line);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 6px 24px rgba(15,23,42,.08)}
+.logo{display:flex;align-items:center;gap:.65rem;font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:-.03em;color:var(--ink);text-decoration:none}
+.logo-mark{width:44px;height:44px;border-radius:12px;overflow:hidden;flex:0 0 auto;background:#fff;
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(15,23,42,.12)}
+.logo-mark img{width:100%;height:100%;object-fit:contain;padding:3px;display:block}
+.head-right{display:flex;align-items:center;gap:.75rem}
+.discord-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;border-radius:12px;background:#5865f2;color:#fff;
+  font-weight:600;font-size:.88rem;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 6px 20px rgba(88,101,242,.35)}
+.discord-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(88,101,242,.5)}
+
+/* match title bar */
+.match-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin:1.75rem 0 1rem}
+.match-title{display:flex;align-items:center;gap:.7rem;min-width:0}
+.live-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .7rem;border-radius:99px;background:var(--red);color:#fff;
+  font-size:.7rem;font-weight:700;letter-spacing:.06em;flex:0 0 auto}
+.live-pill .dot{width:6px;height:6px;border-radius:50%;background:#fff;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.4;transform:scale(.75)}}
+.match-title h1{font-family:var(--display);font-weight:800;font-size:clamp(1.15rem,2.6vw,1.6rem);letter-spacing:-.02em;line-height:1.2;color:var(--ink);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.back-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1rem;border-radius:12px;border:1px solid var(--line);
+  background:var(--card);color:var(--text2);font-weight:600;font-size:.85rem;text-decoration:none;transition:.25s;box-shadow:0 2px 8px rgba(15,23,42,.05);flex:0 0 auto}
+.back-btn:hover{border-color:var(--line2);color:var(--ink);transform:translateY(-1px)}
+
+/* player card */
+.player-card{padding:1rem;border-radius:20px;background:var(--card);border:1px solid var(--line);box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.player{position:relative;width:100%;max-width:960px;margin:0 auto;aspect-ratio:16/9;background:#000;border-radius:14px;overflow:hidden;
+  border:1px solid var(--line)}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.player .p-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;color:#94a3b8}
+.p-loading i{font-size:1.6rem;color:var(--red)}
+.p-loading span{font-size:.85rem}
+
+/* controls */
+.controls{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.6rem 1.1rem;border-radius:12px;cursor:pointer;
+  font-weight:700;font-size:.82rem;text-decoration:none;transition:.2s;border:1px solid transparent}
+.btn i{font-size:.75rem}
+.btn-solid{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn-solid:hover{background:#1e293b;border-color:#1e293b;box-shadow:0 6px 16px rgba(15,23,42,.25)}
+.btn-red{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-red:hover{background:var(--red2);border-color:var(--red2);box-shadow:0 6px 16px rgba(225,29,72,.3)}
+.btn-outline{background:var(--card);color:var(--text2);border-color:var(--line2)}
+.btn-outline:hover{color:var(--ink);border-color:var(--ink3);background:var(--card2)}
+.btn:active{transform:translateY(1px)}
+
+.hint{text-align:center;color:var(--text3);font-size:.78rem;margin-top:.9rem;line-height:1.6}
+
+/* error / no url state */
+.state{padding:4rem 1.5rem;text-align:center;border-radius:20px;background:var(--card);border:1px dashed var(--line2);color:var(--text2);line-height:1.7}
+.state i{font-size:2rem;color:var(--text3);margin-bottom:.8rem;display:block}
+.state .btn{margin-top:1.2rem}
+
+.foot{margin-top:2.5rem;text-align:center;color:var(--text3);font-size:.8rem}
+
+/* ---------- ADS (sticky) ---------- */
+.ad-side{position:fixed;top:50%;transform:translateY(-50%);width:160px;height:600px;z-index:40;display:none;overflow:hidden}
+#adLeft{left:10px}
+#adRight{right:10px}
+.ad-bottom{position:fixed;bottom:10px;left:50%;width:728px;height:90px;z-index:40;display:none;overflow:hidden;border-radius:12px;
+  transform:translateX(-50%);transform-origin:bottom center}
+@media(min-width:1620px){.ad-side{display:block}}
+@media(min-width:790px){.ad-bottom{display:block}body{padding-bottom:112px}}
+@media(max-width:789px){
+  .ad-bottom{display:block;transform:translateX(-50%) scale(.44);border-radius:8px}
+  body{padding-bottom:70px}
+}
+@media(max-width:640px){
+  .app{padding:.75rem .8rem 3rem}
+  .discord-btn span{display:none}.discord-btn{padding:.65rem .8rem}
+  .match-bar{flex-direction:column;align-items:flex-start}
+  .match-title{width:100%}
+  .match-title h1{white-space:normal}
+  .controls{flex-direction:column}
+  .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<!-- Popunder ad -->
+<script data-cfasync="false" src="https://capitalhospitals.org/1/cd2ede3915aed8ac32648df7385b788a"></script>
+
+<div class="bg-orbs"></div>
+
+<div class="app">
+  <header class="header">
+    <a class="logo" href="index.html">
+      <div class="logo-mark">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/National_Football_League_logo.svg/512px-National_Football_League_logo.svg.png" alt="NFL logo"
+             onerror="this.onerror=()=>{this.onerror=null;this.src='https://streameastv2.mom/favicon.svg'};this.src='https://a.espncdn.com/i/teamlogos/leagues/ogs/nfl.png'">
+      </div>NFL Webcast</a>
+    <div class="head-right">
+      <a href="https://discord.gg/aEqBuf8Ys" class="discord-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i><span>Join Discord</span></a>
+    </div>
+  </header>
+
+  <div class="match-bar">
+    <div class="match-title">
+      <span class="live-pill"><span class="dot"></span>LIVE</span>
+      <h1 id="mTitle">Live Match</h1>
+    </div>
+    <a class="back-btn" href="index.html"><i class="fa-solid fa-arrow-left"></i>Back to Schedule</a>
+  </div>
+
+  <div id="wrap">
+    <div class="player-card">
+      <div class="player" id="playerBox">
+        <div class="p-loading"><i class="fa-solid fa-circle-notch fa-spin"></i><span>Loading stream…</span></div>
+      </div>
+      <div class="controls">
+        <button class="btn btn-red" id="btnReload"><i class="fa-solid fa-rotate-right"></i>Reload Stream</button>
+        <a class="btn btn-outline" id="btnDirect" href="#" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i>Open Direct Link</a>
+        <a class="btn btn-solid" href="index.html"><i class="fa-solid fa-list"></i>All Matches</a>
+      </div>
+      <p class="hint">Stream lagging or black screen? Press <b>Reload Stream</b> once. Still stuck? Try <b>Open Direct Link</b> in a new tab.</p>
+    </div>
+  </div>
+
+  <p class="foot">&copy; NFL Webcast. All team and league names and logos belong to their respective owners.</p>
+</div>
+
+<!-- ===== ADS ===== -->
+<!-- Left 160x600 sticky -->
+<div class="ad-side" id="adLeft">
+  <script type="text/javascript">
+    atOptions = {'key':'8460d979eaa04e23e84499b613e6aca9','format':'iframe','height':600,'width':160,'params':{}};
+  </script>
+  <script type="text/javascript" src="https://czernik.org/22/8460d979eaa04e23e84499b613e6aca9"></script>
+</div>
+
+<!-- Right 160x600 sticky -->
+<div class="ad-side" id="adRight">
+  <script type="text/javascript">
+    atOptions = {'key':'8460d979eaa04e23e84499b613e6aca9','format':'iframe','height':600,'width':160,'params':{}};
+  </script>
+  <script type="text/javascript" src="https://czernik.org/22/8460d979eaa04e23e84499b613e6aca9"></script>
+</div>
+
+<!-- Bottom 728x90 sticky -->
+<div class="ad-bottom" id="adBottom">
+  <script type="text/javascript">
+    atOptions = {'key':'6786ca601524f56715d5859a0fc7658f','format':'iframe','height':90,'width':728,'params':{}};
+  </script>
+  <script type="text/javascript" src="https://czernik.org/22/6786ca601524f56715d5859a0fc7658f"></script>
+</div>
+
+<!-- Histats analytics -->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5048377,4,9,110,60,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5048377&101" alt="website stats" border="0"></a></noscript>
+
+<script>
+(function(){
+  const usp=new URLSearchParams(location.search);
+  const url=usp.get('url')||'';
+  const title=usp.get('title')||'';
+  const $=id=>document.getElementById(id);
+  const wrap=$('wrap'),playerBox=$('playerBox');
+
+  // title set karo — match ka naam
+  if(title){
+    $('mTitle').textContent=title;
+    document.title=title+' — Watch Live on NFL Webcast';
+  }
+
+  const valid=/^https?:\/\//i.test(url);
+
+  if(!valid){
+    // koi URL nahi — error state dikhao
+    wrap.innerHTML=`<div class="state">
+      <i class="fa-solid fa-tv"></i>
+      No stream selected.<br>Go back to the schedule and press Watch on any match.
+      <br><a class="btn btn-solid" href="index.html"><i class="fa-solid fa-arrow-left"></i>Back to Schedule</a>
+    </div>`;
+    return;
+  }
+
+  // direct link button
+  $('btnDirect').href=url;
+
+  // iframe load karo
+  function loadStream(){
+    playerBox.innerHTML=`<iframe src="${url.replace(/"/g,'&quot;')}" allowfullscreen allow="autoplay; fullscreen; encrypted-media; picture-in-picture" referrerpolicy="no-referrer" scrolling="no"></iframe>`;
+  }
+  loadStream();
+
+  // reload button — stream fresh load hota hai
+  $('btnReload').addEventListener('click',loadStream);
+})();
+</script>
+</body>
+</html>
