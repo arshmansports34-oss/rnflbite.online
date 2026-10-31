@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NflBite, NFL Webcast, Reddit NFL Streams — Watch NFL Streams Live</title>
+<meta name="description" content="NflBite, NFL Webcast, Reddit NFL Streams — watch every NFL game live in one clean schedule. Sunday slate, primetime nights, playoffs and the Super Bowl on NflBite.">
+<meta name="keywords" content="rnflbite, nflbite, nfl webcast, reddit nfl streams, sportsurge, nfl streams, watch nfl live, nfl live stream, nfl games online, sunday night football, monday night football, thursday night football, nfl playoffs, super bowl stream, ncaa football streams, college football live, rnflbite.online">
+<meta name="author" content="NflBite">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#f4f6f9">
+<meta name="application-name" content="NflBite">
+<link rel="canonical" href="https://rnflbite.online/">
+
+<!-- favicon -->
+<link rel="icon" type="image/svg+xml" href="https://streameastv2.mom/favicon.svg">
+<link rel="shortcut icon" type="image/svg+xml" href="https://streameastv2.mom/favicon.svg">
+<link rel="apple-touch-icon" href="https://streameastv2.mom/favicon.svg">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NflBite">
+<meta property="og:title" content="NflBite, NFL Webcast, Reddit NFL Streams — Watch NFL Streams Live">
+<meta property="og:description" content="Every NFL game in one clean schedule. Sunday slate, primetime nights, playoffs and the Super Bowl — football first, stream fast.">
+<meta property="og:url" content="https://rnflbite.online/">
+<meta property="og:image" content="https://streameastv2.mom/favicon.svg">
+<meta property="og:image:alt" content="NflBite — live NFL schedule">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NflBite, NFL Webcast, Reddit NFL Streams — Watch NFL Streams Live">
+<meta name="twitter:description" content="Every NFL game in one clean schedule. Sunday slate, primetime nights, playoffs and the Super Bowl.">
+<meta name="twitter:image" content="https://streameastv2.mom/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "name":"NflBite",
+      "alternateName":["NflBite","NFL Webcast","Reddit NFL Streams","Sportsurge"],
+      "url":"https://rnflbite.online/",
+      "image":"https://streameastv2.mom/favicon.svg",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":{"@type":"EntryPoint","urlTemplate":"https://rnflbite.online/?q={search_term_string}"},
+        "query-input":"required name=search_term_string"
+      }
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Is rnflbite.online the official home of NflBite, NFL Webcast and Reddit NFL Streams?","acceptedAnswer":{"@type":"Answer","text":"Yes. All three names point to this board. The schedule, the fixture feed and the player page are one and the same, so the name you searched makes no difference to what you see."}},
+        {"@type":"Question","name":"What is the fastest way to find tonight's game?","acceptedAnswer":{"@type":"Answer","text":"Type your team's name into the search bar, or tap the Live tab to see everything currently on air. Both take seconds and neither requires a reload."}},
+        {"@type":"Question","name":"Do the streams work outside the United States?","acceptedAnswer":{"@type":"Answer","text":"The board and player load in any modern browser anywhere in the world. Availability of a specific stream depends on the source, but the schedule itself is always visible."}},
+        {"@type":"Question","name":"Can I put the games on my TV?","acceptedAnswer":{"@type":"Answer","text":"Yes. The player works in smart TV browsers and can be cast or mirrored from a phone or laptop. Full-screen mode is supported on every device."}},
+        {"@type":"Question","name":"What should I do if a stream buffers or stays black?","acceptedAnswer":{"@type":"Answer","text":"Press Reload Stream once on the player page. If it still fails, open the direct link in a new tab, and if the problem persists, report the match on the Discord server linked in the header."}},
+        {"@type":"Question","name":"Does the board show live scores?","acceptedAnswer":{"@type":"Answer","text":"No. The board is a schedule — it shows teams, times and live status, and leaves the scoreboard to the stream itself so nothing spoils the game."}},
+        {"@type":"Question","name":"Why do other sports appear alongside the NFL?","acceptedAnswer":{"@type":"Answer","text":"The feed carries the full sports calendar through Sportsurge. NFL and NCAA leagues are always pinned to the top, so other sports never get in the way of football."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#f4f6f9; --card:#ffffff; --card2:#f8fafc; --line:#e5e9f0; --line2:#cbd5e1;
+  --ink:#0f172a; --ink2:#334155; --ink3:#94a3b8;
+  --red:#e11d48; --red2:#be123c; --gold:#d97706;
+  --text:var(--ink); --text2:#475569; --text3:#94a3b8; --live:#e11d48;
+  --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'DM Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+
+/* soft light glow */
+.bg-orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(900px 520px at 82% -12%,rgba(225,29,72,.07),transparent 62%),
+  radial-gradient(760px 480px at -8% 24%,rgba(37,99,235,.06),transparent 62%),
+  radial-gradient(640px 420px at 55% 112%,rgba(217,119,6,.05),transparent 62%)}
+
+.app{max-width:1280px;margin:0 auto;padding:1rem 1.25rem 4rem}
+
+/* header */
+.header{position:sticky;top:.75rem;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.7rem 1rem .7rem 1.1rem;border-radius:18px;background:rgba(255,255,255,.85);border:1px solid var(--line);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 6px 24px rgba(15,23,42,.08)}
+.logo{display:flex;align-items:center;gap:.65rem;font-family:var(--display);font-weight:800;font-size:1.4rem;letter-spacing:-.03em;color:var(--ink)}
+.logo-mark{width:44px;height:44px;border-radius:12px;overflow:hidden;flex:0 0 auto;background:#fff;
+  border:1px solid var(--line);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(15,23,42,.12)}
+.logo-mark img{width:100%;height:100%;object-fit:contain;padding:3px;display:block}
+.head-right{display:flex;align-items:center;gap:.75rem}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 10px rgba(225,29,72,.5);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.45;transform:scale(.8)}}
+.discord-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.2rem;border-radius:12px;background:#5865f2;color:#fff;
+  font-weight:600;font-size:.88rem;text-decoration:none;transition:transform .25s,box-shadow .25s;box-shadow:0 6px 20px rgba(88,101,242,.35)}
+.discord-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(88,101,242,.5)}
+
+/* hero */
+.hero{padding:1.75rem 0 1.25rem;display:grid;gap:1rem}
+.intro{padding:1.5rem 1.6rem;border-radius:16px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--red);
+  box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.intro h1{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3.2vw,2.1rem);letter-spacing:-.03em;line-height:1.15;margin-bottom:.6rem;color:var(--ink)}
+.intro p{color:var(--text2);font-size:.95rem;line-height:1.7;max-width:80ch}
+.stats{display:flex;flex-wrap:wrap;gap:.75rem}
+.stat{display:flex;align-items:baseline;gap:.5rem;padding:.5rem .9rem;border-radius:12px;background:var(--card);border:1px solid var(--line);box-shadow:0 4px 14px rgba(15,23,42,.05)}
+.stat b{font-family:var(--display);font-size:1.25rem;font-weight:800;letter-spacing:-.03em;color:var(--ink)}
+.stat span{color:var(--text2);font-size:.85rem}
+.stat.hot{border-color:rgba(225,29,72,.35)}
+.stat.hot b{color:var(--red)}
+
+/* toolbar */
+.toolbar{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;margin-bottom:1rem}
+.search{position:relative;flex:1 1 280px}
+.search i{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text3);font-size:.9rem}
+.search input{width:100%;padding:.85rem 1rem .85rem 2.6rem;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:.95rem;outline:none;transition:.25s;box-shadow:0 2px 8px rgba(15,23,42,.04)}
+.search input::placeholder{color:var(--text3)}
+.search input:focus{border-color:var(--red);box-shadow:0 0 0 4px rgba(225,29,72,.12)}
+.seg{display:flex;padding:.25rem;border-radius:14px;background:var(--card);border:1px solid var(--line);box-shadow:0 2px 8px rgba(15,23,42,.04)}
+.seg button{border:0;background:none;color:var(--text2);padding:.6rem 1rem;border-radius:10px;font-weight:600;font-size:.85rem;cursor:pointer;transition:.25s}
+.seg button:hover{color:var(--ink)}
+.seg button.on{background:var(--ink);color:#fff;box-shadow:0 4px 12px rgba(15,23,42,.25)}
+
+.chips{display:flex;gap:.5rem;overflow-x:auto;padding:.25rem 0 1rem;margin-bottom:1rem;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1rem;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--text2);font-weight:500;font-size:.85rem;cursor:pointer;transition:.25s;box-shadow:0 2px 8px rgba(15,23,42,.04)}
+.chip:hover{border-color:var(--line2);color:var(--ink);transform:translateY(-1px)}
+.chip .n{font-size:.72rem;padding:.05rem .45rem;border-radius:99px;background:rgba(15,23,42,.06);color:var(--ink2);font-weight:700}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:700}
+.chip.on .n{background:rgba(255,255,255,.2);color:#fff}
+
+/* leagues */
+.league{margin-top:2.2rem}
+.league-head{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;flex-wrap:wrap}
+.league-head img{width:28px;height:28px;object-fit:contain;padding:4px;border-radius:10px;background:var(--card2);border:1px solid var(--line)}
+.league-head h2{font-family:var(--display);font-size:1.15rem;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+.league-top .league-head h2{color:var(--red)}
+.tag{font-size:.75rem;padding:.2rem .65rem;border-radius:99px;background:var(--card2);color:var(--text2);border:1px solid var(--line)}
+.tag.live{background:rgba(225,29,72,.08);color:var(--red);border-color:rgba(225,29,72,.3);display:inline-flex;align-items:center;gap:.35rem}
+.tag.top{background:rgba(225,29,72,.08);color:var(--red);border-color:rgba(225,29,72,.3);font-weight:700;display:inline-flex;align-items:center;gap:.35rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:.85rem}
+
+/* match card — clean white */
+.card{position:relative;display:flex;flex-direction:column;gap:.8rem;padding:.9rem 1rem 1rem;border-radius:16px;
+  background:var(--card);border:1px solid var(--line);overflow:hidden;
+  box-shadow:0 2px 10px rgba(15,23,42,.05);
+  transition:transform .35s cubic-bezier(.22,.61,.36,1),border-color .35s ease,box-shadow .35s ease,opacity .35s ease}
+.card:hover{transform:translateY(-3px);border-color:var(--line2);
+  box-shadow:0 16px 36px rgba(15,23,42,.12)}
+.card.is-live{border-color:rgba(225,29,72,.45);box-shadow:0 0 0 1px rgba(225,29,72,.1),0 8px 24px rgba(225,29,72,.08)}
+.card.is-ended{opacity:.55}
+.card.is-ended:hover{opacity:.85}
+.c-top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;font-size:.72rem;color:var(--text3)}
+.c-top .when{display:flex;align-items:center;gap:.4rem}
+.badge{display:inline-flex;align-items:center;gap:.3rem;padding:.14rem .55rem;border-radius:99px;font-size:.66rem;font-weight:700}
+.badge.live{background:var(--red);color:#fff}
+.badge.live .dot{background:#fff;box-shadow:none;width:5px;height:5px}
+.badge.up{background:rgba(217,119,6,.1);color:var(--gold)}
+.badge.end{background:rgba(15,23,42,.06);color:var(--text3)}
+.c-teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:.6rem}
+.team{display:flex;flex-direction:column;align-items:center;gap:.4rem;text-align:center;min-width:0}
+.team img{width:42px;height:42px;object-fit:contain;padding:4px;border-radius:10px;background:var(--card2);border:1px solid var(--line);
+  transition:transform .35s cubic-bezier(.22,.61,.36,1),border-color .35s ease}
+.card:hover .team img{transform:scale(1.09);border-color:var(--line2)}
+.team span{font-weight:600;font-size:.8rem;line-height:1.3;max-width:100%;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--ink2)}
+.c-time{display:flex;flex-direction:column;align-items:center;gap:.15rem}
+.c-time b{font-family:var(--display);font-size:.95rem;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+.c-time small{font-size:.62rem;color:var(--text3);text-transform:uppercase;letter-spacing:.05em}
+
+/* watch button — clean solid */
+.watch{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;width:100%;padding:.6rem .9rem;
+  border-radius:11px;cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:#fff;
+  font-weight:700;font-size:.78rem;letter-spacing:.02em;
+  transition:background .2s ease,border-color .2s ease,transform .15s ease,box-shadow .2s ease}
+.watch i{font-size:.7rem;transition:transform .25s ease}
+.watch:hover{background:#1e293b;border-color:#1e293b;box-shadow:0 6px 16px rgba(15,23,42,.25)}
+.watch:hover i{transform:scale(1.15)}
+.watch:active{transform:translateY(1px)}
+.card.is-live .watch{background:var(--red);border-color:var(--red)}
+.card.is-live .watch:hover{background:var(--red2);border-color:var(--red2);box-shadow:0 6px 16px rgba(225,29,72,.3)}
+.card.is-ended .watch{background:var(--card);border-color:var(--line2);color:var(--text2);box-shadow:none}
+.card.is-ended .watch:hover{background:var(--card2);color:var(--ink)}
+.watch[disabled]{opacity:.45;cursor:not-allowed}
+
+/* states */
+.state{padding:3.5rem 1.5rem;text-align:center;border-radius:20px;background:var(--card);border:1px dashed var(--line2);color:var(--text2);line-height:1.6}
+.state.err{border-color:rgba(225,29,72,.5);color:var(--red)}
+.state button{margin-top:1rem;padding:.65rem 1.3rem;border-radius:12px;border:0;background:var(--ink);color:#fff;font-weight:600;cursor:pointer}
+.skel{height:210px;border-radius:20px;background:linear-gradient(100deg,#eef1f5 30%,#e2e8f0 50%,#eef1f5 70%);background-size:300% 100%;animation:sh 1.4s infinite}
+@keyframes sh{to{background-position:-100% 0}}
+
+/* article — single container */
+.guide{margin-top:3rem;padding:1.6rem 1.7rem;border-radius:20px;background:var(--card);border:1px solid var(--line);
+  box-shadow:0 10px 30px rgba(15,23,42,.06)}
+.guide section{padding-top:1.5rem;margin-top:1.5rem;border-top:1px solid var(--line)}
+.guide section:first-child{padding-top:0;margin-top:0;border-top:0}
+.guide h2{font-family:var(--display);font-size:1.18rem;font-weight:700;letter-spacing:-.02em;line-height:1.35;margin-bottom:.6rem;color:var(--ink)}
+.guide h3{font-family:var(--display);font-size:1rem;font-weight:700;letter-spacing:-.01em;margin:1.15rem 0 .35rem;color:var(--ink)}
+.guide p,.guide li{color:var(--text2);font-size:.93rem;line-height:1.8}
+.guide ul{padding-left:1.1rem;display:grid;gap:.35rem}
+.guide p+p{margin-top:.6rem}
+
+/* FAQ accordion */
+.faq details{background:var(--card2);border:1px solid var(--line);border-radius:13px;overflow:hidden;transition:border-color .25s ease,background .25s ease}
+.faq details+details{margin-top:.6rem}
+.faq details[open]{border-color:var(--line2);background:#fff}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:.9rem;
+  padding:.85rem 1.1rem;font-weight:600;font-size:.92rem;color:var(--ink);user-select:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--red)}
+.faq summary i{flex:0 0 auto;color:var(--text3);font-size:.75rem;transition:transform .3s ease,color .3s ease}
+.faq details[open] summary i{transform:rotate(180deg);color:var(--red)}
+.faq details p{padding:0 1.1rem .95rem;color:var(--text2);font-size:.9rem;line-height:1.75}
+
+.foot{margin-top:2rem;text-align:center;color:var(--text3);font-size:.8rem}
+
+/* ---------- ADS (sticky) ---------- */
+.ad-side{position:fixed;top:50%;transform:translateY(-50%);width:160px;height:600px;z-index:40;display:none;overflow:hidden}
+#adLeft{left:10px}
+#adRight{right:10px}
+.ad-bottom{position:fixed;bottom:10px;left:50%;width:728px;height:90px;z-index:40;display:none;overflow:hidden;border-radius:12px;
+  transform:translateX(-50%);transform-origin:bottom center}
+@media(min-width:1620px){.ad-side{display:block}}
+@media(min-width:790px){.ad-bottom{display:block}body{padding-bottom:112px}}
+@media(max-width:789px){
+  .ad-bottom{display:block;transform:translateX(-50%) scale(.44);border-radius:8px}
+  body{padding-bottom:70px}
+}
+@media(max-width:640px){
+  .app{padding:.75rem .8rem 3rem}
+  .discord-btn span{display:none}.discord-btn{padding:.65rem .8rem}
+  .grid{grid-template-columns:1fr}
+  .seg{width:100%}.seg button{flex:1;padding:.6rem .4rem}
+  .hero{padding-top:2rem}
+  .guide{padding:1.2rem 1.1rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<!-- Popunder ad -->
+<script data-cfasync="false" src="https://capitalhospitals.org/1/cd2ede3915aed8ac32648df7385b788a"></script>
+
+<div class="bg-orbs"></div>
+
+<div class="app">
+  <header class="header">
+    <div class="logo">
+      <div class="logo-mark">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d1/National_Football_League_logo.svg/512px-National_Football_League_logo.svg.png" alt="NflBite logo"
+             onerror="this.onerror=()=>{this.onerror=null;this.src='https://streameastv2.mom/favicon.svg'};this.src='https://a.espncdn.com/i/teamlogos/leagues/ogs/nfl.png'">
+      </div>NflBite</div>
+    <div class="head-right">
+      <a href="https://discord.gg/aEqBuf8Ys" class="discord-btn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-discord"></i><span>Join Discord</span></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="intro">
+      <h1>NflBite, NFL Webcast, Reddit NFL Streams — Your Front-Row Seat to Every NFL Stream</h1>
+      <p>Game day has a rhythm: wake up, check the slate, find your game, settle in before the anthem. NflBite, NFL Webcast and Reddit NFL Streams keep that rhythm intact by putting the entire NFL calendar on one board that refreshes itself — logos, kickoff times and live badges included. Football leads the page by design, with NFL and NCAA fixtures pinned above everything else, and one tap on Watch carries you straight into the player. Rain or shine, September or February, rnflbite.online is the shortest distance between you and the game.</p>
+    </div>
+    <div class="stats">
+      <div class="stat hot"><b id="stLive">0</b><span>live now</span></div>
+      <div class="stat"><b id="stUp">0</b><span>coming up</span></div>
+      <div class="stat"><b id="stAll">0</b><span>total matches</span></div>
+    </div>
+  </section>
+
+  <div class="toolbar">
+    <label class="search"><i class="fa-solid fa-magnifying-glass"></i><input id="q" type="search" placeholder="Search teams or leagues" aria-label="Search teams or leagues"></label>
+    <div class="seg" id="seg">
+      <button class="on" data-s="all">All</button>
+      <button data-s="live">Live</button>
+      <button data-s="upcoming">Upcoming</button>
+      <button data-s="ended">Ended</button>
+    </div>
+  </div>
+
+  <div class="chips" id="chips"></div>
+
+  <div id="out"><div class="grid"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div></div>
+
+  <div class="guide">
+    <section>
+      <h2>Kickoff Doesn't Wait — and With NflBite, NFL Webcast, Reddit NFL Streams, Neither Do You</h2>
+      <p>The most painful part of football Sunday isn't the loss — it's the ten minutes before kickoff spent hunting a link that works. NflBite, NFL Webcast and Reddit NFL Streams remove that hunt completely. The board pulls its fixture feed fresh on its own, lays every game out as a card with both logos and the exact start time, and marks each one with a badge: red for live, gold for upcoming, grey for done. No dead bookmarks, no guessing, no tab roulette.</p>
+      <h3>One Board, Every Down</h3>
+      <p>The board doesn't sit still while you watch. Kickoff flips the badge red and lifts the league to the top of the page; the final whistle dims the card but leaves the watch button warm for a replay. Statuses are re-checked every minute, so the page you glanced at an hour ago is still telling the truth now — no refresh required.</p>
+    </section>
+
+    <section>
+      <h2>Three Moves From Landing Page to Live Football</h2>
+      <p>Everything on the board responds instantly, and the three filters stack so a full week of fixtures collapses into a single game in seconds.</p>
+      <ul>
+        <li>Pick the NFL chip — it leads the sport row — to clear the board of everything except football.</li>
+        <li>Switch the status tabs between All, Live, Upcoming and Ended to slice the slate by what's happening right now.</li>
+        <li>Type a team, city or league into the search bar and the board narrows with every keystroke.</li>
+        <li>Press Watch and the player page opens in its own tab, stream already loading.</li>
+        <li>Bookmark rnflbite.online once — next Sunday's games are then one tap from anywhere.</li>
+      </ul>
+      <h3>A Link That Opens Exactly Where You Left Off</h3>
+      <p>Filter the board to your team, then copy the address bar and send it anywhere. A link like rnflbite.online/?q=your-team opens with the same shortlist already applied, so the group chat goes from argument to action in a single message.</p>
+    </section>
+
+    <section>
+      <h2>Week 1 to the Lombardi Trophy: What NflBite, NFL Webcast, Reddit NFL Streams Carry</h2>
+      <p>The board walks the full NFL calendar — every window, every week, every round of the postseason — and keeps college Saturdays and the wider sports world alongside it, each league under its own heading.</p>
+      <h3>Sunday Windows, Sorted</h3>
+      <p>Early window, late window, international kickoffs — every Sunday fixture appears with its start time printed on the card, so building a full afternoon of football is just a matter of reading down the list.</p>
+      <h3>The Night Games Never Slip Away</h3>
+      <p>Thursday, Sunday and Monday nights each get their own cards, and the red live badge makes the running game impossible to miss — even if you open the page deep in the fourth quarter.</p>
+      <h3>When January Arrives, So Does the Board</h3>
+      <p>Wild Card weekend, the Divisional Round, Championship Sunday and the Super Bowl land on the schedule the moment their times lock. And in the quiet months, the same page stays alive with soccer, basketball, hockey, MMA and more through Sportsurge.</p>
+    </section>
+
+    <section>
+      <h2>Cleaner Than Any Link Folder You've Ever Kept</h2>
+      <p>A folder of saved links is a graveyard waiting to happen — half of them die by November. NflBite, NFL Webcast and Reddit NFL Streams replace the folder with a page that rebuilds itself, a watch button that always points somewhere real, and zero pop-up mazes between you and the stream.</p>
+      <h3>Speed You Can Feel</h3>
+      <p>The schedule is lean on purpose: logos load lazily, nothing heavy runs before you press Watch, and the whole page renders fast on old phones and weak signals alike. Couch, bar or stadium queue — the board behaves the same everywhere.</p>
+    </section>
+
+    <section>
+      <h2>Free Means Free on NflBite, NFL Webcast, Reddit NFL Streams</h2>
+      <p>No account to create, no email to surrender, no premium tier hiding the good games. Open rnflbite.online, read the slate, tap Watch — that's the entire flow. NflBite, NFL Webcast and Reddit NFL Streams all lead here, and here the football is already waiting.</p>
+    </section>
+
+    <section class="faq">
+      <h2>NflBite, NFL Webcast, Reddit NFL Streams FAQ – Frequently Asked Questions</h2>
+
+      <details>
+        <summary>Is rnflbite.online the official home of NflBite, NFL Webcast and Reddit NFL Streams?<i class="fa-solid fa-chevron-down"></i></summary>
+        <p>Yes. All three names point to this board. The schedule, the fixture feed and the player page are one and the same, so the name you searched makes no difference to what you see.</p>
+      </details>
+
+      <details>
+        <summary>What is the fastest way to find tonight's game?<i class="fa-solid fa-chevron-down"></i></summary>
+        <p>Type your team's name into the search bar, or tap the Live tab to see everything currently on air. Both take seconds and neither requires a reload.</p>
+      </details>
+
+      <details>
+        <summary>Do the streams work outside the United States?<i class="fa-solid fa-chevron-down"></i></summary>
+        <p>The board and player load in any modern browser anywhere in the world. Availability of a specific stream depends on the source, but the schedule itself is always visible.</p>
+      </details>
+
+      <details>
+        <summary>Can I put the games on my TV?<i class="fa-solid fa-chevron-down"></i></summary>
+        <p>Yes. The player works in smart TV browsers and can be cast or mirrored from a phone or laptop. Full-screen mode is supported on every device.</p>
+      </details>
+
+      <details>
+        <summary>What should I do if a stream buffers or stays black?<i class="fa-solid fa-chevron-down"></i></summary>
+        <p>Press Reload Stream once on the player page. If it still fails, open the direct link in a new tab, and if the problem persists, report the match on the Discord server linked in the header.</p>
+      </details>
+
+      <details>
+        <summary>Does the board show live scores?<i class="fa-solid fa-chevron-down"></i></summary>
+        <p>No. The board is a schedule — it shows teams, times and live status, and leaves the scoreboard to the stream itself so nothing spoils the game.</p>
+      </details>
+
+      <details>
+        <summary>Why do other sports appear alongside the NFL?<i class="fa-solid fa-chevron-down"></i></summary>
+        <p>The feed carries the full sports calendar through Sportsurge. NFL and NCAA leagues are always pinned to the top, so other sports never get in the way of football.</p>
+      </details>
+    </section>
+  </div>
+  <p class="foot">&copy; NflBite, NFL Webcast, Reddit NFL Streams. All team and league names and logos belong to their respective owners.</p>
+</div>
+
+<!-- ===== ADS: sirf 3 div — jitni ads utne ===== -->
+<!-- Left 160x600 sticky (desktop wide screens) -->
+<div class="ad-side" id="adLeft">
+  <script type="text/javascript">
+    atOptions = {'key':'8460d979eaa04e23e84499b613e6aca9','format':'iframe','height':600,'width':160,'params':{}};
+  </script>
+  <script type="text/javascript" src="https://czernik.org/22/8460d979eaa04e23e84499b613e6aca9"></script>
+</div>
+
+<!-- Right 160x600 sticky (desktop wide screens) -->
+<div class="ad-side" id="adRight">
+  <script type="text/javascript">
+    atOptions = {'key':'8460d979eaa04e23e84499b613e6aca9','format':'iframe','height':600,'width':160,'params':{}};
+  </script>
+  <script type="text/javascript" src="https://czernik.org/22/8460d979eaa04e23e84499b613e6aca9"></script>
+</div>
+
+<!-- Bottom 728x90 sticky (desktop full size + mobile scaled) -->
+<div class="ad-bottom" id="adBottom">
+  <script type="text/javascript">
+    atOptions = {'key':'6786ca601524f56715d5859a0fc7658f','format':'iframe','height':90,'width':728,'params':{}};
+  </script>
+  <script type="text/javascript" src="https://czernik.org/22/6786ca601524f56715d5859a0fc7658f"></script>
+</div>
+
+<!-- Histats analytics -->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5048377,4,9,110,60,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5048377&101" alt="website stats" border="0"></a></noscript>
+
+<script>
+(function(){
+  const API_URL='https://ovogoal.pages.dev//api/v2/flyembed2.json';
+  const $=id=>document.getElementById(id);
+  const out=$('out'),chips=$('chips'),q=$('q'),seg=$('seg');
+  let all=[],sport='all',status='all';
+
+  const META={soccer:['Soccer','fa-futbol'],basketball:['NBA','fa-basketball'],football:['NFL','fa-football'],hockey:['NHL','fa-hockey-puck'],
+    mma:['UFC','fa-hand-fist'],baseball:['MLB','fa-baseball'],tennis:['Tennis','fa-table-tennis-paddle-ball'],motorsport:['F1','fa-flag-checkered'],
+    cricket:['Cricket','fa-baseball-bat-ball'],rugby:['Rugby','fa-football'],golf:['Golf','fa-golf-ball-tee'],boxing:['Boxing','fa-hand-fist'],
+    volleyball:['Volleyball','fa-volleyball'],handball:['Handball','fa-hand'],esports:['Esports','fa-gamepad']};
+
+  const FB="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='11' fill='%23f8fafc'/><path fill='%23e11d48' d='M12 5l3 4h-2v5h-2V9H9l3-4z'/></svg>";
+  const esc=s=>s==null?'':String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+  const img=(src,cls)=>`<img ${cls?`class="${cls}" `:''}src="${esc(src||FB)}" alt="" loading="lazy" onerror="this.onerror=null;this.src=this.dataset.fb" data-fb="${FB}">`;
+
+  // ===== NFL / NCAA TOP PRIORITY =====
+  function leaguePrio(k){
+    const s=String(k).toLowerCase();
+    if(s.includes('nfl'))return 0;
+    if(s.includes('ncaa')||s.includes('college'))return 1;
+    return 9;
+  }
+
+  function fmtTime(t){
+    if(!t)return '--:--';
+    const p=String(t).split(':');if(p.length<2)return t;
+    let h=parseInt(p[0],10);if(isNaN(h))return t;
+    const ap=h>=12?'PM':'AM';h=h%12||12;
+    return `${h}:${p[1].slice(0,2)} ${ap}`;
+  }
+  function fmtDate(d){
+    if(!d)return 'TBD';
+    const x=new Date(d+'T00:00:00');if(isNaN(x))return d;
+    const today=new Date();today.setHours(0,0,0,0);
+    const diff=Math.round((x-today)/864e5);
+    if(diff===0)return 'Today';if(diff===1)return 'Tomorrow';if(diff===-1)return 'Yesterday';
+    return x.toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+  }
+  function norm(s){
+    if(!s)return '';s=String(s).toLowerCase().trim();
+    if(s.includes('soccer'))return 'soccer';
+    if(s.includes('basketball')||s.includes('nba'))return 'basketball';
+    if(s.includes('american football')||s.includes('nfl'))return 'football';
+    if(s.includes('hockey')||s.includes('nhl'))return 'hockey';
+    if(s.includes('mma')||s.includes('ufc'))return 'mma';
+    if(s.includes('baseball')||s.includes('mlb'))return 'baseball';
+    if(s.includes('tennis'))return 'tennis';
+    if(/motorsport|formula|f1|racing/.test(s))return 'motorsport';
+    for(const k of ['cricket','rugby','golf','boxing','volleyball','handball'])if(s.includes(k))return k;
+    if(s.includes('esport'))return 'esports';
+    return s;
+  }
+  function getStatus(m){
+    try{
+      if(!m.MatchDate||!m.MatchStartTime)return 'upcoming';
+      const start=new Date(`${m.MatchDate}T${m.MatchStartTime}:00`);
+      if(isNaN(start))return 'upcoming';
+      let end;
+      if(m.MatchEndTime){end=new Date(`${m.MatchDate}T${m.MatchEndTime}:00`);if(!isNaN(end)&&end<=start)end.setDate(end.getDate()+1);}
+      if(!end||isNaN(end))end=new Date(start.getTime()+72e5);
+      const now=new Date();
+      if(now>=end)return 'ended';
+      if(now>=new Date(start.getTime()-3e5))return 'live';
+      return 'upcoming';
+    }catch(e){return 'upcoming'}
+  }
+  const startMs=m=>{const d=new Date(`${m.MatchDate}T${m.MatchStartTime}:00`);return isNaN(d)?0:d.getTime()};
+  const rank={live:0,upcoming:1,ended:2};
+
+  function card(m){
+    const st=m._st;
+    const badge=st==='live'?`<span class="badge live"><span class="dot"></span>LIVE</span>`:st==='ended'?`<span class="badge end">Ended</span>`:`<span class="badge up">Upcoming</span>`;
+    const url=/^https?:\/\//i.test(m.IframeURL||'')?m.IframeURL:'';
+    const title=(m.Team1||'Team 1')+' vs '+(m.Team2||'Team 2');
+    return `<article class="card ${st==='live'?'is-live':''} ${st==='ended'?'is-ended':''}">
+      <div class="c-top"><span class="when"><i class="fa-regular fa-calendar"></i>${esc(fmtDate(m.MatchDate))}</span>${badge}</div>
+      <div class="c-teams">
+        <div class="team">${img(m.Team1Logo)}<span>${esc(m.Team1||'Team 1')}</span></div>
+        <div class="c-time"><b>${esc(fmtTime(m.MatchStartTime))}</b><small>kickoff</small></div>
+        <div class="team">${img(m.Team2Logo)}<span>${esc(m.Team2||'Team 2')}</span></div>
+      </div>
+      <button class="watch" data-url="${esc(url)}" data-title="${esc(title)}"${url?'':' disabled'}><i class="fa-solid fa-play"></i>${st==='live'?'Watch live':st==='ended'?'Watch replay':'Watch'}</button>
+    </article>`;
+  }
+
+  function render(list){
+    if(!list.length){
+      out.innerHTML=`<div class="state"><i class="fa-regular fa-face-meh" style="font-size:1.8rem;margin-bottom:.6rem;display:block"></i>No matches found. Try another sport, status or search.</div>`;
+      return;
+    }
+    const groups={},names={};
+    list.forEach(m=>{const raw=String(m.League||'Other').trim(),k=raw.toLowerCase();names[k]=names[k]||raw;(groups[k]=groups[k]||[]).push(m)});
+    const keys=Object.keys(groups).sort((a,b)=>{
+      const pa=leaguePrio(a),pb=leaguePrio(b);
+      if(pa!==pb)return pa-pb;
+      const la=groups[a].some(m=>m._st==='live'),lb=groups[b].some(m=>m._st==='live');
+      return la!==lb?(la?-1:1):a.localeCompare(b);
+    });
+    out.innerHTML=keys.map(k=>{
+      const items=groups[k].sort((a,b)=>rank[a._st]-rank[b._st]||startMs(a)-startMs(b));
+      const lc=items.filter(m=>m._st==='live').length;
+      const isTop=leaguePrio(k)<9;
+      return `<section class="league ${isTop?'league-top':''}"><div class="league-head">${img(items[0].LeagueLogo)}<h2>${esc(names[k])}</h2>
+        ${isTop?`<span class="tag top"><i class="fa-solid fa-fire"></i>Top</span>`:''}
+        ${lc?`<span class="tag live"><span class="dot"></span>${lc} live</span>`:''}
+        <span class="tag">${items.length} ${items.length===1?'match':'matches'}</span></div>
+        <div class="grid">${items.map(card).join('')}</div></section>`;
+    }).join('');
+  }
+
+  function stats(){
+    const live=all.filter(m=>m._st==='live').length,up=all.filter(m=>m._st==='upcoming').length;
+    $('stLive').textContent=live;$('stUp').textContent=up;$('stAll').textContent=all.length;
+  }
+
+  function buildChips(){
+    const c={};all.forEach(m=>{const s=norm(m.Sport);if(s)c[s]=(c[s]||0)+1});
+    const slugs=Object.keys(c).sort((a,b)=>{
+      const pa=a==='football'?0:9,pb=b==='football'?0:9;
+      if(pa!==pb)return pa-pb;
+      return c[b]-c[a];
+    });
+    chips.innerHTML=`<button class="chip ${sport==='all'?'on':''}" data-sp="all"><i class="fa-solid fa-layer-group"></i>All<span class="n">${all.length}</span></button>`+
+      slugs.map(s=>{const m=META[s]||[s.charAt(0).toUpperCase()+s.slice(1),'fa-trophy'];
+        return `<button class="chip ${sport===s?'on':''}" data-sp="${esc(s)}"><i class="fa-solid ${m[1]}"></i>${esc(m[0])}<span class="n">${c[s]}</span></button>`}).join('');
+  }
+
+  function apply(){
+    all.forEach(m=>m._st=getStatus(m));
+    stats();
+    const t=q.value.toLowerCase().trim();
+    let f=all;
+    if(sport!=='all')f=f.filter(m=>norm(m.Sport)===sport);
+    if(status!=='all')f=f.filter(m=>m._st===status);
+    if(t)f=f.filter(m=>[m.Team1,m.Team2,m.League].some(x=>(x||'').toLowerCase().includes(t)));
+    render(f);
+  }
+
+  async function load(){
+    try{
+      const r=await fetch(API_URL,{cache:'no-store'});
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      const d=await r.json();
+      all=Array.isArray(d)?d:[];
+      if(!all.length){out.innerHTML=`<div class="state">No matches available right now. Check back soon.</div>`;stats();return}
+      buildChips();apply();
+    }catch(e){
+      console.error(e);
+      if(!all.length)out.innerHTML=`<div class="state err">Couldn't load matches (${esc(e.message)}).<br>The server may be busy.<br><button id="retry">Try again</button></div>`;
+    }
+  }
+
+  chips.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;sport=b.dataset.sp;chips.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===b));apply()});
+  seg.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;status=b.dataset.s;seg.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));apply()});
+  out.addEventListener('click',e=>{
+    if(e.target.closest('#retry'))return load();
+    const b=e.target.closest('.watch');
+    if(b&&b.dataset.url){
+      window.open('watch.html?url='+encodeURIComponent(b.dataset.url)+'&title='+encodeURIComponent(b.dataset.title||'Live Match'),'_blank','noopener');
+    }
+  });
+  let tm;q.addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(apply,180)});
+
+  // support ?q= search links (e.g. rnflbite.online/?q=chiefs)
+  const usp=new URLSearchParams(location.search).get('q');
+  if(usp)q.value=usp;
+
+  load();
+  setInterval(()=>{if(all.length)apply()},60000);
+  setInterval(load,300000);
+})();
+</script>
+</body>
+</html>
